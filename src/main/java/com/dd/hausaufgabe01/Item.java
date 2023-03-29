@@ -35,9 +35,6 @@ public class Item
         public void addSavedPrice(double savedPriceToAdd) //Megtakarított pénz hozzáadása
         {
             savedPrice += savedPriceToAdd;
-            if (savedPrice >= price) 
-            {
-                wishlist.removeItem(this);
-            }
+            
         }
 }

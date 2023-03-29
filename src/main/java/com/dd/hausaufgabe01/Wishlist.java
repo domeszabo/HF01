@@ -10,7 +10,8 @@ public class Wishlist
 {
     private List<Item> items;
     private double savedMoney;
-
+    
+   
     public Wishlist() 
     {
         this.items = new ArrayList<>();
@@ -22,7 +23,7 @@ public class Wishlist
         items.add(item);
     }
 
-    public void addSavedMoney(double moneyToAdd) // Megtakarított pénz hozzáadása
+    public void addSavedMoney(double moneyToAdd) 
     {
         int itemCount = items.size();
         double moneyPerItem = moneyToAdd / itemCount;
@@ -40,10 +41,9 @@ public class Wishlist
         return savedMoney;
     }
     
-    
-
     public void removeItem(Item item) 
     {
+       // if(getSavedMoney() / items.size() >= item.getPrice())
         items.remove(item);
     }
 
@@ -59,8 +59,5 @@ public class Wishlist
     {
         return items;
     }
-    
-    
-    
     
 }
