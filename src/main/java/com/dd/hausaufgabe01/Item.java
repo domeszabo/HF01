@@ -16,6 +16,10 @@ public class Item
             this.price = price;
             this.savedPrice = 0;
         }
+        public Item()
+        {
+            
+        }
 
         public String getName() 
         {

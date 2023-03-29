@@ -3,6 +3,7 @@ package com.dd.hausaufgabe01;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -27,13 +28,14 @@ public class Wishlist
     {
         int itemCount = items.size();
         double moneyPerItem = moneyToAdd / itemCount;
-
+       
         for (Item item : items)
         {
             item.addSavedPrice(moneyPerItem);
         }
 
         savedMoney += moneyToAdd;
+        
     }
 
     public double getSavedMoney() 
@@ -41,12 +43,11 @@ public class Wishlist
         return savedMoney;
     }
     
-    public void removeItem(Item item) 
-    {
-       // if(getSavedMoney() / items.size() >= item.getPrice())
-        items.remove(item);
-    }
-
+    //public void removeItem(Item item) 
+    //{
+    //    items.remove(item);
+    //}
+    
     public void printItems() 
     {
         for (Item item : items) 
@@ -59,5 +60,20 @@ public class Wishlist
     {
         return items;
     }
+    
+    public void removeItemsCompletedSavings() 
+    {
+    Iterator<Item> iterator = items.iterator();
+
+    while (iterator.hasNext()) 
+    {
+        Item item = iterator.next();
+
+        if (item.getPrice() == item.getSavedPrice()) 
+        {
+            iterator.remove();
+        }
+    }
+}
     
 }
