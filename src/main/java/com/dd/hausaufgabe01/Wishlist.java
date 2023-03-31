@@ -42,11 +42,7 @@ public class Wishlist
     {
         return savedMoney;
     }
-    
-    //public void removeItem(Item item) 
-    //{
-    //    items.remove(item);
-    //}
+
     
     public void printItems() 
     {
@@ -61,7 +57,7 @@ public class Wishlist
         return items;
     }
     
-    public void removeItemsCompletedSavings() 
+    public void removeItemsCompleted() 
     {
     Iterator<Item> iterator = items.iterator();
 
@@ -69,7 +65,7 @@ public class Wishlist
     {
         Item item = iterator.next();
 
-        if (item.getPrice() == item.getSavedPrice()) 
+        if (item.getPrice() <= item.getSavedPrice()) 
         {
             iterator.remove();
         }

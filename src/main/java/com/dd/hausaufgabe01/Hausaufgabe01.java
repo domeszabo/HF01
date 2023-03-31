@@ -15,7 +15,9 @@ public class Hausaufgabe01 {
 
         wishlist.addSavedMoney(100000);
         
-        wishlist.removeItemsCompletedSavings();
+        wishlist.removeItemsCompleted();
+        
+        
         wishlist.printItems(); // prints: Laptop - 100000 Ft (100%), Telefon - 50000 Ft (100%)
         
        
