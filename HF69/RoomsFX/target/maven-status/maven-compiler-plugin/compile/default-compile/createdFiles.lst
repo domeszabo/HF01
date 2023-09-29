@@ -1,0 +1,5 @@
+com\dd\RoomsFX\AppCore.class
+com\dd\RoomsFX\RoomsFXApplication.class
+com\dd\RoomsFX\model\RoomRepository.class
+com\dd\RoomsFX\model\Sector.class
+com\dd\RoomsFX\model\Room.class
